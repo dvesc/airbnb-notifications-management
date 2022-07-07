@@ -28,7 +28,9 @@ export const SQS_complete_users_registration_consumer = (): void => {
         obj_msg: any = JSON.parse(string_msg);
 
       // enviamos el email
-      console.log(`Sending email to ${obj_msg.email}`);
+      console.log(
+        `[S3QUEUE:complete-user-registration] Sending email to ${obj_msg.email}`
+      );
       send_email(obj_msg.email, obj_msg.html, obj_msg.subject);
     },
     sqs: params,
