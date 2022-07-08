@@ -29,7 +29,7 @@ export const SQS_register_process_consumer = (): void => {
 
       // enviamos el email
       console.log(
-        `[S3QUEUE:register-process] Sending email to ${obj_msg.email}`
+        `[S3-QUEUE]:register-process/sending email to ${obj_msg.email}`
       );
       send_email(obj_msg.email, obj_msg.html, obj_msg.subject);
     },

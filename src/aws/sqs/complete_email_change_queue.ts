@@ -29,7 +29,7 @@ export const SQS_complete_email_change_queue = (): void => {
 
       // enviamos el email
       console.log(
-        `[S3QUEUE:complete-email-change] Sending email to ${obj_msg.email}`
+        `[S3-QUEUE]:complete-email-change/sending email to ${obj_msg.email}`
       );
       send_email(obj_msg.email, obj_msg.html, obj_msg.subject);
     },

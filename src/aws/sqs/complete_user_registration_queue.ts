@@ -29,7 +29,7 @@ export const SQS_complete_users_registration_consumer = (): void => {
 
       // enviamos el email
       console.log(
-        `[S3QUEUE:complete-user-registration] Sending email to ${obj_msg.email}`
+        `[S3-QUEUE]:complete-user-registration/sending email to ${obj_msg.email}`
       );
       send_email(obj_msg.email, obj_msg.html, obj_msg.subject);
     },

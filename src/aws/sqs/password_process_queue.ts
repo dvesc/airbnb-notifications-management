@@ -29,7 +29,7 @@ export const SQS_password_process_queue = (): void => {
 
       // enviamos el email
       console.log(
-        `[S3QUEUE:password-process] Sending email to ${obj_msg.email}`
+        `[S3-QUEUE]:password-process/sending email to ${obj_msg.email}`
       );
       send_email(obj_msg.email, obj_msg.html, obj_msg.subject);
     },

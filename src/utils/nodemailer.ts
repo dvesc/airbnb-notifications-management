@@ -20,7 +20,7 @@ export const send_email = (
   subject: string
 ): void => {
   const mailDetails = {
-    from: process.env.NODEMAILER_EMAIL, // Nosotros, correo emisor
+    from: `Airbnb <${process.env.NODEMAILER_EMAIL}>`, // El mombre
     to: email, // El correro destinatario
     subject, // Titulo del email
     html,
@@ -30,6 +30,9 @@ export const send_email = (
   // eslint-disable-next-line no-unused-vars
   transporter.sendMail(mailDetails, (err, data) => {
     if (err) console.log('Nodemailer Error!');
-    else console.log('Email sent successfully');
+    else
+      console.log(
+        `Email sent successfully.\n\tSubject: ${subject}\n\tTo: ${email}`
+      );
   });
 };

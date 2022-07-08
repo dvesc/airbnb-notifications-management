@@ -29,7 +29,7 @@ export const SQS_complete_password_change_queue = (): void => {
 
       // enviamos el email
       console.log(
-        `[S3QUEUE:complete-password-change] Sending email to ${obj_msg.email}`
+        `[S3-QUEUE]:complete-password-change/sending email to ${obj_msg.email}`
       );
       send_email(obj_msg.email, obj_msg.html, obj_msg.subject);
     },
